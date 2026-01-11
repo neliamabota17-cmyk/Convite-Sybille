@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hello 20 — Sybille 🎉</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --prim: #b37a6a;
+      --sec: #7b4a3e;
+      --dark: #111010;
+      --glow: #e4c1b0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.6)),
+                  url('fundo2.jpg') center/cover fixed no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* Tela inicial */
+    #intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(3px);
+      padding: 20px;
+    }
+
+    #intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    #intro p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 340px;
+    }
+
+    .enter-btn {
+      margin-top: 20px;
+      background: linear-gradient(90deg, var(--prim), var(--sec));
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .enter-btn:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Card do convite */
+    #main {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 380px;
+      max-width: 90%;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 28px 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+
+    /* She Did It */
+    .Hello-20y{
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .Hello-20y h1 {
+      margin: 0;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .Hello {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: slideDown 1.2s ease forwards;
+    }
+
+    .Twenty {
+      font-family: 'Great Vibes', cursive;
+      font-size: 52px;
+      color: var(--prim);
+      text-shadow: 0 0 8px var(--glow);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    .year{
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #fff;
+      letter-spacing: 1px;
+      animation: slideUp 1.2s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px var(--prim), 0 0 10px var(--prim); }
+      to { text-shadow: 0 0 15px var(--glow), 0 0 25px var(--glow); }
+    }
+
+    .date {
+      font-size: 13px;
+      letter-spacing: 3px;
+      margin: 10px 0 18px;
+      opacity: 0.9;
+    }
+
+    .text {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.95;
+      margin-bottom: 18px;
+    }
+
+    .info {
+      font-size: 13px;
+      background: rgba(255,255,255,0.08);
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--prim), var(--sec));
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 22px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 6px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .dress {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .dress img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+
+    .footer {
+      font-size: 12px;
+      margin-top: 16px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <section id="intro">
+    <h2>💕 Convite especial!✨ </h2>
+    <p>Há exatamente 20 anos eu cheguei ao mundo… e agora é hora de comemorar! 
+      Quero você ao meu lado 
+      Para transformar este dia em uma festa cheia de risos, memórias e momentos especiais
+       🌷💕
+💕 Clica abaixo e entra nesta celebração de amor e conquistas. 💖</p>
+    <button class="enter-btn" onclick="entrarConvite()">Entrar na celebração 🎶</button>
+  </section>
+
+  <!-- Música de fundo -->
+  <audio id="bgMusic" loop>
+    <source src="happy.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Convite principal -->
+  <section id="main">
+    <div class="card">
+      <div class="Hello-20">
+        <h1 class="Hello">Hello</h1>
+        <h1 class="20">20 ✨</h1>
+        
+
+      <div class="date">14 • FEVEREIRO • 2026 • 14h00</div>
+
+       <div class="text">
+    🎉 Cheguei aos 20!  
+    E sim… estou oficialmente numa nova fase da vida 😄✨  
+    <br><br>
+    São 20 anos de histórias, risadas, aprendizados,
+    sonhos que cresceram comigo
+    e muita vontade de aproveitar tudo o que a vida ainda tem para oferecer.
+    <br><br>
+    Este aniversário não é só sobre bolo e velas —
+    é sobre celebrar quem eu sou,
+    quem me tornei
+    e quem ainda estou a descobrir ser.
+    <br><br>
+    Quero comemorar do jeito que gosto:
+    sem formalidades,
+    com boa música,
+    fotos espontâneas
+    e gargalhadas sem hora para acabar.
+    <br><br>
+    Se estás a ler isto, é porque fazes parte da minha história.
+    Vem celebrar comigo 💖🎂
+  </div>
+
+  <div class="info">
+    📍 <strong>Local:</strong> Bairro da Liberdade<br>
+    🕒 <strong>Hora:</strong> 14h00<br>
+  </div>
+
+
+      <div>
+        <a class="btn" href="https://wa.me/258844091275?text=Olá%20Sybille!%20Vim%20Confirmar%20a%20minha%20presença%20na%20tua%20festa%20de%20aniversario!%20💖" target="_blank">Confirmar Presença 💌</a>
+        <a class="btn" href="https://maps.app.goo.gl/SFQJGZgdM35hW1PA7" target="_blank">Ver Localização 📍</a>
+        <a class="btn" onclick="toggleDress()">Dress Code 👗</a>
+      </div>
+
+      <div class="dress" id="dress">
+        <p><em>💕💖 O Dress Code é oficial! Queremos uma festa cheia de cores, alegria e sorrisos.
+        Preto é só para mim, a aniversariante da vez! 😉
+        Escolhe tons que transmitam alegria, brilho e felicidade.
+        Veste o que te faz sentir incrível, confiante e pronto(a) para celebrar meus 20 anos comigo nesse dia! 🌟💫 🌸 💫</em></p>
+        <img src="paletas.jpg" alt="Paleta de cores sugerida">
+      </div>
+
+      <div class="footer">
+        ✨ Com carinho, <strong>Sybille Fumo</strong> ✨💖
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function entrarConvite() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('main').style.display = 'flex';
+      const audio = document.getElementById('bgMusic');
+      audio.volume = 0.7;
+      audio.play().catch(() => {});
+    }
+
+    function toggleDress() {
+      const d = document.getElementById('dress');
+      d.style.display = d.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
